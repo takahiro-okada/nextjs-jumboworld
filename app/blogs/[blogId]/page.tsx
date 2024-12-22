@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { getDetail } from "@/libs/client";
 import Image from "next/image";
 
