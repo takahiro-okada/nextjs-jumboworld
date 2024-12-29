@@ -121,9 +121,7 @@ export function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Button href="/contact" onClick={toggleMenu}>
-                    お問い合わせ
-                  </Button>
+                  <Button href="/contact">お問い合わせ</Button>
                 </li>
               </ul>
             </nav>
