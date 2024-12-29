@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { OrbitControls, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import Globe from "@/app/_components/Globe";
 
 import { Button } from "../elements/Button";

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { WorkCard } from "@/app/_features/works/components/WorkCard";
 import { WorkFilter } from "@/app/_features/works/components/WorkFilter";
 import type { Work } from "@/app/_features/works/types/index";
 import PageTitle from "@/app/_components/elements/PageTitle";
@@ -16,6 +15,7 @@ export default function WorksPage() {
     title: "A社様",
     description: "常滑のECサイト。",
     imageUrl: "/placeholder.svg",
+    date: "2024/12/01",
     tags: ["SHOPIFY", "DESIGN", "PHOTO", "PHOTO"],
   });
 
@@ -45,7 +45,12 @@ export default function WorksPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {displayedWorks.map((work, index) => (
-              <BlogCard key={index} {...work} />
+              <BlogCard
+                key={index}
+                title={work.title}
+                date={work.date}
+                tags={work.tags}
+              />
             ))}
           </div>
 
