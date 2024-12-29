@@ -3,6 +3,8 @@ import Link from "next/link";
 import { CalendarIcon, ClockIcon, UserIcon } from "lucide-react";
 import { Sidebar } from "@/app/_features/blog/components/Sidebar";
 
+export const runtime = "edge";
+
 export default function BlogPostPage() {
   return (
     <div className="min-h-screen bg-gray-50">
