@@ -1,3 +1,6 @@
+import { LucideFolder, CalendarDays } from "lucide-react";
+import Link from "next/link";
+
 interface Category {
   name: string;
   count: number;
@@ -25,44 +28,36 @@ export function Sidebar() {
   return (
     <aside className="w-full lg:w-1/4 space-y-8">
       <div className="bg-white rounded-lg p-6">
-        <h2 className="font-bold mb-4">カテゴリー</h2>
+        <h2 className="text-lg font-bold mb-4">カテゴリー</h2>
         <ul className="space-y-2">
-          {categories.map((category) => (
-            <li key={category.name} className="flex items-center">
-              <input
-                type="checkbox"
-                id={category.name}
-                className="w-4 h-4 rounded border-gray-300"
-              />
-              <label htmlFor={category.name} className="ml-2 text-sm">
-                {category.name}
-              </label>
+          {categories.map((category, index) => (
+            <li key={category.name}>
+              <Link
+                href={`/column/category/${index}`}
+                className="flex items-center"
+              >
+                <LucideFolder />
+                <p className="ml-2 py-1 text-lg font-bold">{category.name}</p>
+              </Link>
             </li>
           ))}
         </ul>
       </div>
 
       <div className="bg-white rounded-lg p-6">
-        <h2 className="font-bold mb-4">投稿日</h2>
+        <h2 className="mb-4 text-lg font-bold ">投稿日</h2>
         <ul className="space-y-2">
-          {archives.map((archive) => (
+          {archives.map((archive, index) => (
             <li key={archive.date}>
-              <button className="text-sm hover:text-gray-600 flex items-center">
-                <svg
-                  className="w-4 h-4 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-                {archive.date}
-              </button>
+              <Link
+                href={`/column/archive/${index}`}
+                className="flex items-center"
+              >
+                <CalendarDays />
+                <p className="hover:text-gray-600 text-lg font-bold ml-2 py-1">
+                  {archive.date}
+                </p>
+              </Link>
             </li>
           ))}
         </ul>

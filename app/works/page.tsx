@@ -4,6 +4,8 @@ import { useState } from "react";
 import { WorkCard } from "@/app/_features/works/components/WorkCard";
 import { WorkFilter } from "@/app/_features/works/components/WorkFilter";
 import type { Work } from "@/app/_features/works/types/index";
+import PageTitle from "@/app/_components/elements/PageTitle";
+import { BlogCard } from "../_features/blog/components/BlogCard";
 
 export default function WorksPage() {
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -32,8 +34,10 @@ export default function WorksPage() {
   return (
     <>
       <main className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-12">制作実績</h1>
-        <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="mt-10">
+          <PageTitle title="制作実績" />
+        </div>
+        <div className="bg-gray-50 mt-12 px-4 sm:px-6 lg:px-8">
           <WorkFilter
             selectedFilter={selectedFilter}
             onFilterChange={setSelectedFilter}
@@ -41,7 +45,7 @@ export default function WorksPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {displayedWorks.map((work, index) => (
-              <WorkCard key={index} {...work} />
+              <BlogCard key={index} {...work} />
             ))}
           </div>
 
