@@ -12,7 +12,7 @@ export default async function BlogDetailPage({
 
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <article className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <article className="max-w-3xl mx-auto  shadow-lg rounded-lg overflow-hidden">
         {blog.eyecatch && (
           <div className="relative h-64 sm:h-80 lg:h-96">
             <Image
