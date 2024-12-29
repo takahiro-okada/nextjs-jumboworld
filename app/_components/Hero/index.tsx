@@ -1,4 +1,10 @@
-import Image from "next/image";
+"use client";
+
+import { useRef } from "react";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { OrbitControls, Sphere } from "@react-three/drei";
+import Globe from "@/app/_components/Globe";
+
 import { Button } from "../elements/Button";
 
 export function Hero() {
@@ -18,13 +24,12 @@ export function Hero() {
         </div>
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
           <div className="relative w-full aspect-square max-w-md mx-auto">
-            <Image
-              src="/images/hero.jpg"
-              alt="JUMBO WORLD"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg shadow-lg"
-            />
+            <Canvas>
+              <ambientLight intensity={1.5} />
+              <pointLight position={[10, 10, 10]} />
+              <Globe />
+              <OrbitControls enableZoom={false} enablePan={false} />
+            </Canvas>
           </div>
         </div>
       </div>
