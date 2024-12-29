@@ -25,7 +25,7 @@ export default async function BlogListPage() {
           {contents.map((blog) => (
             <li
               key={blog.id}
-              className="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg"
+              className=" shadow-md rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <Link
                 href={`/blogs/${blog.id}`}
