@@ -4,6 +4,8 @@ import { Sidebar } from "@/app/_features/blog/components/Sidebar";
 import posts from "@/app/_constants/sample-blog-data.json";
 import PageTitle from "@/app/_components/elements/PageTitle";
 
+export const runtime = "edge";
+
 export default function ColumnPage() {
   return (
     <>

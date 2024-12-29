@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "知多半島のイベントに参加して感じたこと",
+    "date": "2024/12/01",
+    "tags": ["SHOPIFY", "DESIGN", "PHOTO"]
+  },
+  {
+    "id": 2,
+    "title": "新しいデザインツールの紹介",
+    "date": "2024/11/15",
+    "tags": ["DESIGN", "TOOLS"]
+  },
+  {
+    "id": 3,
+    "title": "Shopifyでの成功事例",
+    "date": "2024/11/10",
+    "tags": ["SHOPIFY", "ECOMMERCE"]
+  },
+  {
+    "id": 4,
+    "title": "写真撮影のテクニック",
+    "date": "2024/10/25",
+    "tags": ["PHOTO", "TIPS"]
+  },
+  {
+    "id": 5,
+    "title": "デザインの基本原則",
+    "date": "2024/10/20",
+    "tags": ["DESIGN", "BASICS"]
+  },
+  {
+    "id": 6,
+    "title": "Shopifyの最新アップデート",
+    "date": "2024/10/15",
+    "tags": ["SHOPIFY", "UPDATE"]
+  },
+  {
+    "id": 7,
+    "title": "秋の風景写真集",
+    "date": "2024/10/01",
+    "tags": ["PHOTO", "AUTUMN"]
+  },
+  {
+    "id": 8,
+    "title": "デザインとユーザビリティ",
+    "date": "2024/09/25",
+    "tags": ["DESIGN", "UX"]
+  },
+  {
+    "id": 9,
+    "title": "Shopifyでのマーケティング戦略",
+    "date": "2024/09/15",
+    "tags": ["SHOPIFY", "MARKETING"]
+  },
+  {
+    "id": 10,
+    "title": "ポートレート写真のコツ",
+    "date": "2024/09/01",
+    "tags": ["PHOTO", "PORTRAIT"]
+  },
+  {
+    "id": 11,
+    "title": "デザインのトレンド2024",
+    "date": "2024/08/25",
+    "tags": ["DESIGN", "TRENDS"]
+  },
+  {
+    "id": 12,
+    "title": "ShopifyでのSEO対策",
+    "date": "2024/08/10",
+    "tags": ["SHOPIFY", "SEO"]
+  }
+]

@@ -20,14 +20,14 @@ export function BlogCard({ title, date, tags }: BlogCardProps) {
           />
         </div>
         <div className="p-4">
-          <h2 className="font-bold mb-2 line-clamp-2 group-hover:text-gray-600">
+          <h2 className="font-bold mb-2 text-lg line-clamp-2 group-hover:text-gray-600">
             {title}
           </h2>
           <div className="flex flex-wrap gap-2 mb-3">
             {tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-2 py-1 text-xs bg-gray-100 rounded"
+                className="px-2 py-1 text-xs bg-black text-white rounded"
               >
                 #{tag}
               </span>
