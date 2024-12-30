@@ -28,34 +28,22 @@ export function Header() {
         <nav className="hidden md:block">
           <ul className="flex gap-8">
             <li>
-              <Link
-                href="/works"
-                className="text-lg text-gray-800 hover:text-gray-600 font-bold"
-              >
+              <Link href="/works" className="text-lg font-bold">
                 制作実績
               </Link>
             </li>
             <li>
-              <Link
-                href="/column"
-                className="text-lg text-gray-800 hover:text-gray-600 font-bold"
-              >
+              <Link href="/column" className="text-lg font-bold">
                 コラム
               </Link>
             </li>
             <li>
-              <Link
-                href="/price"
-                className="text-lg text-gray-800 hover:text-gray-600 font-bold"
-              >
+              <Link href="/price" className="text-lg font-bold">
                 料金
               </Link>
             </li>
             <li>
-              <Link
-                href="/company"
-                className="text-lg text-gray-800 hover:text-gray-600 font-bold"
-              >
+              <Link href="/company" className="text-lg font-bold">
                 会社概要
               </Link>
             </li>
@@ -65,7 +53,7 @@ export function Header() {
           </ul>
         </nav>
         <button
-          className="md:hidden text-lg text-gray-800 hover:text-gray-600 font-bold"
+          className="md:hidden text-lg font-bold"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -76,7 +64,7 @@ export function Header() {
         <div className="md:hidden fixed inset-0 z-50 bg-white">
           <div className="flex flex-col items-center justify-center h-full">
             <button
-              className="absolute top-4 right-4 text-lg text-gray-800 hover:text-gray-600 font-bold"
+              className="absolute top-4 right-4 text-lg font-bold"
               onClick={toggleMenu}
               aria-label="Close menu"
             >
@@ -87,7 +75,7 @@ export function Header() {
                 <li>
                   <Link
                     href="/works"
-                    className="text-xl text-lg text-gray-800 hover:text-gray-600 font-bold"
+                    className="font-bold"
                     onClick={toggleMenu}
                   >
                     制作実績
@@ -96,7 +84,7 @@ export function Header() {
                 <li>
                   <Link
                     href="/column"
-                    className="text-xl text-lg text-gray-800 hover:text-gray-600 font-bold"
+                    className="font-bold"
                     onClick={toggleMenu}
                   >
                     コラム
@@ -105,7 +93,7 @@ export function Header() {
                 <li>
                   <Link
                     href="/price"
-                    className="text-xl text-lg text-gray-800 hover:text-gray-600 font-bold"
+                    className="font-bold"
                     onClick={toggleMenu}
                   >
                     料金
@@ -114,7 +102,7 @@ export function Header() {
                 <li>
                   <Link
                     href="/company"
-                    className="text-xl text-lg text-gray-800 hover:text-gray-600 font-bold"
+                    className="font-bold"
                     onClick={toggleMenu}
                   >
                     会社概要
