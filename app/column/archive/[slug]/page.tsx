@@ -1,6 +1,6 @@
-import { Pagination } from "@/app/_features/blog/components/Pagination";
-import { BlogCard } from "@/app/_features/blog/components/BlogCard";
-import { Sidebar } from "@/app/_features/blog/components/Sidebar";
+import Pagination from "@/app/_features/blog/components/Pagination";
+import BlogCard from "@/app/_features/blog/components/BlogCard";
+import Sidebar from "@/app/_features/blog/components/Sidebar";
 import posts from "@/app/_constants/sample-blog-data.json";
 import PageTitle from "@/app/_components/elements/PageTitle";
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, ClockIcon, UserIcon } from "lucide-react";
-import { Sidebar } from "@/app/_features/blog/components/Sidebar";
+import Sidebar from "@/app/_features/blog/components/Sidebar";
 
 export const runtime = "edge";
 
