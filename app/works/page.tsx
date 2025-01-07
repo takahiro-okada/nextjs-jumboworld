@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { WorkFilter } from "@/app/_features/works/components/WorkFilter";
+import WorkFilter from "@/app/_features/works/components/WorkFilter";
 import type { Work } from "@/app/_features/works/types/index";
 import PageTitle from "@/app/_components/elements/PageTitle";
-import { BlogCard } from "../_features/blog/components/BlogCard";
+import BlogCard from "../_features/blog/components/BlogCard";
 
 export default function WorksPage() {
   const [selectedFilter, setSelectedFilter] = useState("all");

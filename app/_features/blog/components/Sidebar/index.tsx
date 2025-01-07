@@ -11,7 +11,7 @@ interface Archive {
   count: number;
 }
 
-export function Sidebar() {
+export default function Sidebar() {
   const categories: Category[] = [
     { name: "イベント", count: 5 },
     { name: "毎月の振り返り", count: 3 },

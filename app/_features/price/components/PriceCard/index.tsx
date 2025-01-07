@@ -1,4 +1,4 @@
-import { Button } from "@/app/_components/elements/Button";
+import Button from "@/app/_components/elements/Button";
 
 interface PricingCardProps {
   name: string;
@@ -7,7 +7,7 @@ interface PricingCardProps {
   features: string[];
 }
 
-export function PricingCard({
+export default function PricingCard({
   name,
   description,
   price,

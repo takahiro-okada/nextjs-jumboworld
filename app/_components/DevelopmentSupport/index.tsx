@@ -1,5 +1,5 @@
 import { Code, ShoppingBag, Wrench, Zap, Puzzle, MapPin } from "lucide-react";
-import { Button } from "../elements/Button";
+import Button from "@/app/_components/elements/Button";
 
 export default function DevelopmentSupport() {
   const services = [
@@ -49,55 +49,57 @@ export default function DevelopmentSupport() {
       {/* <div className="py-12 sm:py-16 md:py-24 bg-[url('/images/noise.png')]"> */}
       <div className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">
-            JUMBO WORLDのWeb制作 - 技術力と柔軟性を活かした開発サポート
+          <h2 className="text-2xl md:text-4xl font-bold text-center">
+            技術力と柔軟性を活かした開発サポート
           </h2>
 
-          <div className="text-center mb-12">
-            <p className="text-lg  max-w-3xl mx-auto">
+          <div className="text-center mt-8 sm:mt-12">
+            <p className="text-lg  max-w-3xl mx-auto mt-12">
               JUMBO
-              WORLDは、知多半島を拠点に、Webサイト・ECサイト制作を通じてお客様のビジネスを支援するWeb制作会社です。
+              WORLDは、知多半島を拠点に、Webサイト・ECサイト制作を通じてお客様のビジネスを支援するWeb制作事務所です。
+            </p>
+            <p className="text-lg  max-w-3xl mx-auto mt-5">
               最新技術を駆使したWebサイト制作からShopifyでのECサイト構築まで、幅広いニーズに対応いたします。
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 mt-12  gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
                 className="bg-gray-50 rounded-lg shadow-md p-6 transition-transform hover:scale-105"
               >
-                <div className="flex items-center justify-center mb-4">
+                <div className="flex items-center justify-center">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-center">
+                <h3 className="text-xl font-semibold mt-4 text-center">
                   {service.title}
                 </h3>
-                <p className="text-center">{service.description}</p>
+                <p className="text-center mt-2">{service.description}</p>
               </div>
             ))}
           </div>
 
-          <h3 className="text-2xl font-bold mb-8 text-center">
+          <h3 className="text-2xl font-bold text-center mt-16">
             JUMBO WORLDが選ばれる理由
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             {reasons.map((reason, index) => (
               <div key={index} className="flex flex-col items-center">
-                <div className="bg-white rounded-full p-4 mb-4 shadow-md">
+                <div className="bg-white rounded-full p-4 shadow-md">
                   {reason.icon}
                 </div>
-                <h4 className="text-lg font-semibold mb-2 text-center">
+                <h4 className="text-lg font-semibold mt-4 text-center">
                   {reason.title}
                 </h4>
-                <p className="text-center">{reason.description}</p>
+                <p className="text-center mt-2">{reason.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="text-center">
-            <p className="text-lg  mb-6">
+          <div className="text-center mt-12">
+            <p className="text-lg">
               お客様のビジネスを成功に導くWebソリューションを提供いたします。
               <br />
               Webサイト制作・ECサイト構築に関するご相談は、お気軽にお問い合わせください。

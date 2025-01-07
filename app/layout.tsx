@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "./_components/layouts/Header";
-import { Footer } from "./_components/layouts/Footer";
+import Header from "./_components/layouts/Header";
+import Footer from "./_components/layouts/Footer";
 import { Noto_Sans_JP } from "next/font/google";
 
 export const metadata: Metadata = {

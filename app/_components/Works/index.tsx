@@ -1,6 +1,6 @@
-import { Button } from "../elements/Button";
+import Link from "next/link";
 import posts from "@/app/_constants/sample-blog-data.json";
-import { BlogCard } from "@/app/_features/blog/components/BlogCard";
+import BlogCard from "@/app/_features/blog/components/BlogCard";
 
 export default function Works() {
   return (
@@ -10,7 +10,7 @@ export default function Works() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-0">
             制作実績
           </h2>
-          <Button href="/works">一覧を見る</Button>
+          <Link href="/works">一覧を見る</Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {posts.slice(0, 3).map((work) => (

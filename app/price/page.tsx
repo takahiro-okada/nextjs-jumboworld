@@ -1,6 +1,7 @@
 import PriceSection from "@/app/_features/price/components/PriceSection";
 import ConsultationSection from "@/app/_features/price/components/ConsulationSection";
 import ProductionFlow from "@/app/_features/price/components/ProductionFlow";
+import PageTitle from "@/app/_components/elements/PageTitle";
 
 export default function PricingPage() {
   const webDevelopmentPlans = [
@@ -126,32 +127,42 @@ export default function PricingPage() {
 `;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">
-          料金プラン
-        </h1>
+    <main className="max-w-7xl mx-auto">
+      <div className="mt-10">
+        <PageTitle title="料金プラン" />
+      </div>
 
+      <div className="mt-16">
         <PriceSection
           title="Webサイト制作"
           description="ビジネスの規模に合わせた最適なWebサイト制作プランをご用意しています。"
           plans={webDevelopmentPlans}
           expertiseInfo={webExpertiseInfo}
           maintenanceInfo={webMaintenanceInfo}
+          expertiseIllustration="web-strength.png"
+          maintenanceIllustration="web-support.png"
         />
+      </div>
 
+      <div className="mt-16">
         <PriceSection
           title="Shopify ECサイト構築"
           description="オンラインストアの規模や要件に合わせたShopify構築プランをご提供します。"
           plans={shopifyPlans}
           expertiseInfo={shopifyExpertiseInfo}
           maintenanceInfo={shopifyMaintenanceInfo}
+          expertiseIllustration="ec-strength.png"
+          maintenanceIllustration="web-support.png"
         />
+      </div>
 
-        <ConsultationSection />
-
+      <div className="mt-16">
         <ProductionFlow />
       </div>
-    </div>
+
+      <div className="mt-16">
+        <ConsultationSection />
+      </div>
+    </main>
   );
 }

@@ -1,6 +1,6 @@
 import { Lightbulb, Eye, ScrollText } from "lucide-react";
 
-export function MissionVisionValues() {
+export default function MissionVisionValues() {
   const credoItems = [
     {
       number: "1",
@@ -69,34 +69,32 @@ export function MissionVisionValues() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16">
           <div className="text-center">
-            <div className="inline-block p-3 bg-blue-100 rounded-full mb-4">
+            <div className="inline-block p-3 bg-blue-100 rounded-full">
               <Lightbulb className="w-8 h-8 text-blue-600" />
             </div>
-            <h2 className="text-2xl font-bold mb-4">ミッション</h2>
-            <p className="font-bold text-lg max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold mt-4">ミッション</h2>
+            <p className="font-bold text-lg max-w-2xl mx-auto mt-6">
               地域企業のデジタル化を支援し、知多半島の経済発展に貢献する。革新的なウェブソリューションを通じて、クライアントのビジネス成長を加速させる。
             </p>
           </div>
 
           <div className="text-center">
-            <div className="inline-block p-3 bg-green-100 rounded-full mb-4">
+            <div className="inline-block p-3 bg-green-100 rounded-full">
               <Eye className="w-8 h-8 text-green-600" />
             </div>
-            <h2 className="text-2xl font-bold mb-4">ビジョン</h2>
-            <p className="font-bold text-lg max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold mt-4">ビジョン</h2>
+            <p className="font-bold text-lg max-w-2xl mx-auto mt-6">
               知多半島を日本有数のテクノロジーハブに変革する。地域に根ざしながらグローバルな視点を持ち、世界に通用する技術と創造性を発信し続ける。
             </p>
           </div>
 
-          <div>
-            <div className="text-center mb-12">
-              <div className="inline-block p-3 bg-purple-100 rounded-full mb-4">
-                <ScrollText className="w-8 h-8 text-purple-600" />
-              </div>
-              <h2 className="text-2xl font-bold">CREDO</h2>
+          <div className="text-center">
+            <div className="inline-block p-3 bg-purple-100 rounded-full">
+              <ScrollText className="w-8 h-8 text-purple-600" />
             </div>
+            <h2 className="text-2xl font-bold mt-4">CREDO</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-6">
               {credoItems.map((item, index) => (
                 <div key={index} className="relative pl-12">
                   <div className="absolute left-0 top-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">

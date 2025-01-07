@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function CompanyHero() {
+export default function CompanyHero() {
   return (
     <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
       <Image
