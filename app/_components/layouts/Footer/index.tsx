@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +15,7 @@ export function Footer() {
               className="h-8 sm:h-10 w-auto mb-6 sm:mb-0"
             />
             <nav className="w-full sm:w-auto">
-              <ul className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 text-xs sm:text-sm">
+              <ul className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 text-sm">
                 <li>
                   <Link
                     href="/"

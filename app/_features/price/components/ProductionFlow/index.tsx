@@ -62,8 +62,8 @@ export default function ProductionFlow() {
 
   return (
     <div className="bg-white rounded-lg shadow-md p-8">
-      <h2 className="text-3xl font-bold text-center mb-12">制作の流れ</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+      <h2 className="text-3xl font-bold text-center">制作の流れ</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-12 lg:grid-cols-4 gap-6 p-4">
         {steps.map((step, index) => (
           <div
             key={index}
@@ -72,13 +72,13 @@ export default function ProductionFlow() {
             <div className="absolute top-0 right-0 bg-black text-white text-sm font-bold py-1 px-3 rounded-tr-lg rounded-bl-lg">
               STEP {index + 1}
             </div>
-            <div className="flex items-center justify-center mb-4">
+            <div className="flex items-center justify-center">
               <div className=" w-24 h-24 rounded-full bg-[#F8F8F8] text-black flex items-center justify-center">
                 {getStepIcon(index)}
               </div>
             </div>
-            <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-            <p className="text-gray-600">{step.description}</p>
+            <h3 className="text-xl font-semibold mt-4">{step.title}</h3>
+            <p className="text-gray-600 mt-2">{step.description}</p>
           </div>
         ))}
       </div>

@@ -7,7 +7,7 @@ interface BlogCardProps {
   tags: string[];
 }
 
-export function BlogCard({ title, date, tags }: BlogCardProps) {
+export default function BlogCard({ title, date, tags }: BlogCardProps) {
   return (
     <article className="bg-white rounded-lg overflow-hidden group">
       <Link href="#" className="block">
@@ -20,10 +20,10 @@ export function BlogCard({ title, date, tags }: BlogCardProps) {
           />
         </div>
         <div className="p-4">
-          <h2 className="font-bold mb-2 text-lg line-clamp-2 group-hover:text-gray-600">
+          <h2 className="font-bold text-lg line-clamp-2 group-hover:text-gray-600">
             {title}
           </h2>
-          <div className="flex flex-wrap gap-2 mb-3">
+          <div className="flex flex-wrap gap-2 mt-2">
             {tags.map((tag, index) => (
               <span
                 key={index}
@@ -33,7 +33,7 @@ export function BlogCard({ title, date, tags }: BlogCardProps) {
               </span>
             ))}
           </div>
-          <time className="text-sm text-gray-500">{date}</time>
+          <time className="text-sm text-gray-500 mt-3 block">{date}</time>
         </div>
       </Link>
     </article>

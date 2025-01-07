@@ -4,9 +4,9 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Globe from "@/app/_components/Globe";
 
-import { Button } from "../elements/Button";
+import Button from "@/app/_components/elements/Button";
 
-export function Hero() {
+export default function Hero() {
   return (
     <section className="relative py-12 md:py-40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -17,7 +17,7 @@ export function Hero() {
             お任せください
           </h1>
           <p className="text-sm sm:text-base mt-8 max-w-lg mx-auto md:mx-0">
-            知多半島・半田市の企業様へ、JUMBO
+            知多半島・半田市の企業を中心に、JUMBO
             WORLDが高品質なWebサイト制作・Shopify
             ECサイト構築サービスを提供いたします。
           </p>

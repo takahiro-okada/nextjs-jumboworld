@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/app/_components/elements/Button";
+import Button from "@/app/_components/elements/Button";
 import { Menu, X } from "lucide-react";
 
-export function Header() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -28,22 +28,22 @@ export function Header() {
         <nav className="hidden md:block">
           <ul className="flex gap-8">
             <li>
-              <Link href="/works" className="text-lg font-bold">
+              <Link href="/works" className="font-bold">
                 制作実績
               </Link>
             </li>
             <li>
-              <Link href="/column" className="text-lg font-bold">
+              <Link href="/column" className="font-bold">
                 コラム
               </Link>
             </li>
             <li>
-              <Link href="/price" className="text-lg font-bold">
+              <Link href="/price" className="font-bold">
                 料金
               </Link>
             </li>
             <li>
-              <Link href="/company" className="text-lg font-bold">
+              <Link href="/company" className="font-bold">
                 会社概要
               </Link>
             </li>
@@ -53,7 +53,7 @@ export function Header() {
           </ul>
         </nav>
         <button
-          className="md:hidden text-lg font-bold"
+          className="md:hidden font-bold"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -64,7 +64,7 @@ export function Header() {
         <div className="md:hidden fixed inset-0 z-50 bg-white">
           <div className="flex flex-col items-center justify-center h-full">
             <button
-              className="absolute top-4 right-4 text-lg font-bold"
+              className="absolute top-4 right-4 font-bold"
               onClick={toggleMenu}
               aria-label="Close menu"
             >

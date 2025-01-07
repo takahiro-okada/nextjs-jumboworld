@@ -1,4 +1,4 @@
-export function Pagination() {
+export default function Pagination() {
   return (
     <div className="flex justify-center items-center space-x-2">
       <button className="p-2 rounded-lg border enabled:hover:bg-gray-100 disabled:opacity-50">

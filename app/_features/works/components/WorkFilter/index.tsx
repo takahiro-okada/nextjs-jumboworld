@@ -10,7 +10,7 @@ interface WorkFilterProps {
   onFilterChange: (filter: string) => void;
 }
 
-export function WorkFilter({
+export default function WorkFilter({
   selectedFilter,
   onFilterChange,
 }: WorkFilterProps) {

@@ -8,7 +8,7 @@ interface WorkCardProps {
   tags: string[];
 }
 
-export function WorkCard({
+export default function WorkCard({
   title,
   description,
   imageUrl,

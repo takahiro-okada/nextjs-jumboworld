@@ -1,4 +1,4 @@
-import { MissionVisionValues } from "../_features/company/components/MissionVisionValues";
+import MissionVisionValues from "../_features/company/components/MissionVisionValues";
 
 export default function CompanyPage() {
   const companyInfo = [
