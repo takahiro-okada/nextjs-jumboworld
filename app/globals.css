@@ -67,3 +67,84 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
+
+/* TODO: Add more styles for the blog post content */
+.microcms-article {
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  p {
+    margin-top: 1rem;
+  }
+
+  img {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+
+  blockquote {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--muted);
+    border-left: 0.25rem solid var(--primary);
+  }
+
+  pre {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--muted);
+    border-left: 0.25rem solid var(--primary);
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+  }
+
+  ul {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    list-style: disc;
+  }
+
+  ol {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    list-style: disc;
+  }
+
+  li {
+    margin-top: 0.5rem;
+  }
+
+  table {
+    margin-top: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th {
+    background-color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+  }
+
+  td {
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+  }
+
+  hr {
+    margin-top: 1rem;
+    border: none;
+    border-top: 1px solid var(--border);
+  }
+}
