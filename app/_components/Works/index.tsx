@@ -1,6 +1,4 @@
 import Link from "next/link";
-import posts from "@/app/_constants/sample-blog-data.json";
-import BlogCard from "@/app/_features/blog/components/BlogCard";
 
 export default function Works() {
   return (
@@ -12,11 +10,7 @@ export default function Works() {
           </h2>
           <Link href="/works">一覧を見る</Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {posts.slice(0, 3).map((work) => (
-            <BlogCard key={work.id} {...work} />
-          ))}
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"></div>
       </div>
     </section>
   );

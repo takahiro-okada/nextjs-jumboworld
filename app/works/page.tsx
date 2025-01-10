@@ -4,7 +4,7 @@ import { useState } from "react";
 import WorkFilter from "@/app/_features/works/components/WorkFilter";
 import type { Work } from "@/app/_features/works/types/index";
 import PageTitle from "@/app/_components/elements/PageTitle";
-import BlogCard from "../_features/blog/components/BlogCard";
+// import BlogCard from "../_features/column/components/ColumnList";
 
 export default function WorksPage() {
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -24,7 +24,7 @@ export default function WorksPage() {
     return work.tags.some((tag) => tag.toLowerCase() === selectedFilter);
   });
 
-  const displayedWorks = filteredWorks.slice(0, visibleItems);
+  // const displayedWorks = filteredWorks.slice(0, visibleItems);
   const hasMore = visibleItems < filteredWorks.length;
 
   const handleLoadMore = () => {
@@ -44,14 +44,14 @@ export default function WorksPage() {
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {displayedWorks.map((work, index) => (
+            {/* {displayedWorks.map((work, index) => (
               <BlogCard
                 key={index}
                 title={work.title}
                 date={work.date}
                 tags={work.tags}
               />
-            ))}
+            ))} */}
           </div>
 
           {hasMore && (

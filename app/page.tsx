@@ -1,7 +1,7 @@
 import Hero from "@/app/_components/Hero";
 import DevelopmentSupport from "@/app/_components/DevelopmentSupport";
 import Works from "@/app/_components/Works";
-import Column from "@/app/_features/blog/components/Column";
+import ColumnTop from "@/app/_features/column/components/ColumnTop";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <DevelopmentSupport />
       <Works />
-      <Column />
+      <ColumnTop />
     </main>
   );
 }

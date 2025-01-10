@@ -1,39 +1,45 @@
 import { LucideFolder, CalendarDays } from "lucide-react";
 import Link from "next/link";
+import {
+  Blog,
+  getBlogListByMonth,
+  getAllCategoryList,
+} from "@/app/_libs/microcms";
 
-interface Category {
-  name: string;
-  count: number;
+interface ArchiveData {
+  props: {
+    blog: Blog[];
+    monthlyIndex: {
+      [key: string]: Blog[];
+    };
+  };
 }
 
-interface Archive {
-  date: string;
-  count: number;
-}
+export default async function Sidebar() {
+  const categories = await getAllCategoryList();
 
-export default function Sidebar() {
-  const categories: Category[] = [
-    { name: "イベント", count: 5 },
-    { name: "毎月の振り返り", count: 3 },
-    { name: "家族のこと", count: 2 },
-  ];
+  const archiveData: ArchiveData = await getBlogListByMonth();
+  const archives = Object.entries(archiveData.props.monthlyIndex).map(
+    ([key, value]) => ({
+      date: key,
+      count: value.length,
+    })
+  );
 
-  const archives: Archive[] = [
-    { date: "2024年12月", count: 3 },
-    { date: "2024年11月", count: 4 },
-    { date: "2024年10月", count: 5 },
-    { date: "2024年9月", count: 2 },
-  ];
+  function formatDate(dateString: string): string {
+    const [year, month] = dateString.split("_");
+    return `${year}年${parseInt(month)}月`;
+  }
 
   return (
     <aside className="w-full lg:w-1/4 space-y-8">
       <div className="bg-white rounded-lg p-6">
         <h2 className="text-lg font-bold mb-4">カテゴリー</h2>
         <ul className="space-y-2">
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <li key={category.name}>
               <Link
-                href={`/column/category/${index}`}
+                href={`/column/category/${category.id}`}
                 className="flex items-center"
               >
                 <LucideFolder />
@@ -47,15 +53,15 @@ export default function Sidebar() {
       <div className="bg-white rounded-lg p-6">
         <h2 className="mb-4 text-lg font-bold ">投稿日</h2>
         <ul className="space-y-2">
-          {archives.map((archive, index) => (
+          {archives.map((archive) => (
             <li key={archive.date}>
               <Link
-                href={`/column/archive/${index}`}
+                href={`/column/archive/${archive.date}`}
                 className="flex items-center"
               >
                 <CalendarDays />
                 <p className="hover:text-gray-600 text-lg font-bold ml-2 py-1">
-                  {archive.date}
+                  {formatDate(archive.date)} ({archive.count})
                 </p>
               </Link>
             </li>
