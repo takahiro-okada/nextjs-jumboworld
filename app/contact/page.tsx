@@ -70,7 +70,7 @@ export default function ContactPage() {
               />
             </div>
 
-            <div>
+            {/* <div>
               <span className="block text-sm font-medium text-gray-700">
                 ご相談方法
               </span>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   <span className="ml-2">ご来店</span>
                 </label>
               </div>
-            </div>
+            </div> */}
 
             <div>
               <label

@@ -148,3 +148,11 @@ body {
     border-top: 1px solid var(--border);
   }
 }
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
