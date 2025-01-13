@@ -1,6 +1,12 @@
 import Link from "next/link";
+import WorksGrid from "@/app/_features/works/components/WorksGrid";
+import type { Work } from "@/app/_libs/microcms";
 
-export default function Works() {
+type WorksTopProps = {
+  works: Work[];
+};
+
+export default function WorksTop({ works }: WorksTopProps) {
   return (
     <section className="py-12 sm:py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -10,7 +16,7 @@ export default function Works() {
           </h2>
           <Link href="/works">一覧を見る</Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"></div>
+        <WorksGrid works={works.slice(0, 3)} />
       </div>
     </section>
   );

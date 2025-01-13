@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatDate } from "@/app/_libs/utils";
 import { Blog } from "@/app/_libs/microcms";
+import Tag from "@/app/_components/elements/Tag";
 
 type BlogCardProps = {
   blog: Blog;
@@ -37,9 +38,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
           </h2>
           {blog.category ? (
             <div className="flex flex-wrap gap-2 mt-2">
-              <span className="px-2 py-1 text-xs bg-black text-white rounded">
-                #{blog.category.name}
-              </span>
+              <Tag tag={blog.category.name} />
             </div>
           ) : null}
           <time className="text-sm text-gray-500 mt-3 block">

@@ -1,14 +1,18 @@
 import Hero from "@/app/_components/Hero";
 import DevelopmentSupport from "@/app/_components/DevelopmentSupport";
-import Works from "@/app/_components/Works";
+import { getWorkList } from "@/app/_libs/microcms";
+import WorksTop from "@/app/_features/works/components/WorksTop";
 import ColumnTop from "@/app/_features/column/components/ColumnTop";
 
-export default function Home() {
+export default async function Home() {
+  const { contents: works } = await getWorkList();
+  const topWorks = works.slice(0, 3);
+
   return (
     <main>
       <Hero />
       <DevelopmentSupport />
-      <Works />
+      <WorksTop works={topWorks} />
       <ColumnTop />
     </main>
   );

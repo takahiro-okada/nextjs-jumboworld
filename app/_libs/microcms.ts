@@ -6,10 +6,6 @@ import type {
 } from "microcms-js-sdk";
 import { groupBy } from "./utils";
 
-export type Category = {
-  name: string;
-} & MicroCMSListContent;
-
 export type Blog = {
   id: string;
   title: string;
@@ -19,6 +15,21 @@ export type Blog = {
   createdAt: string;
   category: Category;
   content: string;
+} & MicroCMSListContent;
+
+export type Category = {
+  name: string;
+} & MicroCMSListContent;
+
+export type Work = {
+  id: string;
+  title: string;
+  url: string;
+  publishedAt: string;
+  thumbnail: MicroCMSImage;
+  createdAt: string;
+  category: string;
+  content?: string;
 } & MicroCMSListContent;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
@@ -34,6 +45,7 @@ const client = createClient({
   apiKey: process.env.MICROCMS_API_KEY,
 });
 
+// Columns
 export const getBlogList = async (queries?: MicroCMSQueries) => {
   const listData = await client.getList<Blog>({
     endpoint: "blogs",
@@ -59,29 +71,9 @@ export const getBlogDetail = async (
   return detailData;
 };
 
-export const getCategoryDetail = async (
-  contentId: string,
-  queries?: MicroCMSQueries
-) => {
-  const detailData = await client.get<Category>({
-    endpoint: `categories`,
-    contentId,
-    queries,
-  });
-  return detailData;
-};
-
 export const getAllBlogList = async () => {
   const listData = await client.getAllContents<Blog>({
     endpoint: "blogs",
-  });
-
-  return listData;
-};
-
-export const getAllCategoryList = async () => {
-  const listData = await client.getAllContents<Category>({
-    endpoint: "categories",
   });
 
   return listData;
@@ -128,4 +120,34 @@ export const getBlogListByYearMonth = async (date: string): Promise<Blog[]> => {
     console.error("Error fetching blog posts:", error);
     return [];
   }
+};
+
+// Categories
+export const getCategoryDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.get<Category>({
+    endpoint: `categories`,
+    contentId,
+    queries,
+  });
+  return detailData;
+};
+
+export const getAllCategoryList = async () => {
+  const listData = await client.getAllContents<Category>({
+    endpoint: "categories",
+  });
+
+  return listData;
+};
+
+// Works
+export const getWorkList = async (queries?: MicroCMSQueries) => {
+  const listData = await client.getList<Work>({
+    endpoint: "work",
+    queries,
+  });
+  return listData;
 };
