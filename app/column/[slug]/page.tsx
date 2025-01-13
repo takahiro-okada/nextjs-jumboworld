@@ -7,6 +7,8 @@ import Sidebar from "@/app/_features/column/components/Sidebar";
 import { getBlogDetail } from "@/app/_libs/microcms";
 import { notFound } from "next/navigation";
 
+export const runtime = "edge";
+
 type Props = {
   params: Promise<{
     slug: string;

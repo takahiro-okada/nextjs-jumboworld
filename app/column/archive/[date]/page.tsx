@@ -6,6 +6,8 @@ import Sidebar from "@/app/_features/column/components/Sidebar";
 import PageTitle from "@/app/_components/elements/PageTitle";
 import { getBlogListByYearMonth } from "@/app/_libs/microcms";
 
+export const runtime = "edge";
+
 type Props = {
   params: { date: string };
 };
