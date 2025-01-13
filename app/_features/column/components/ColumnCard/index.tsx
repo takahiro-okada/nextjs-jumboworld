@@ -32,8 +32,8 @@ export default function BlogCard({ blog }: BlogCardProps) {
             />
           )}
         </div>
-        <div className="p-4">
-          <h2 className="font-bold text-lg line-clamp-2 group-hover:text-gray-600">
+        <div className="p-2 md:p-4">
+          <h2 className="font-bold text-sm md:text-base line-clamp-2 group-hover:text-gray-600">
             {blog.title}
           </h2>
           {blog.category ? (
@@ -41,7 +41,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
               <Tag tag={blog.category.name} />
             </div>
           ) : null}
-          <time className="text-sm text-gray-500 mt-3 block">
+          <time className="text-xs text-gray-500 mt-3 block md:text-sm">
             {formatDate(blog.createdAt)}
           </time>
         </div>

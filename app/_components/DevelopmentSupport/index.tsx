@@ -54,11 +54,11 @@ export default function DevelopmentSupport() {
           </h2>
 
           <div className="text-center mt-8 sm:mt-12">
-            <p className="text-lg  max-w-3xl mx-auto mt-12">
+            <p className="text-sm md:text-lg  max-w-3xl mx-auto mt-12">
               JUMBO
               WORLDは、知多半島を拠点に、Webサイト・ECサイト制作を通じてお客様のビジネスを支援するWeb制作事務所です。
             </p>
-            <p className="text-lg  max-w-3xl mx-auto mt-5">
+            <p className="text-sm md:text-lg  max-w-3xl mx-auto mt-5">
               最新技術を駆使したWebサイト制作からShopifyでのECサイト構築まで、幅広いニーズに対応いたします。
             </p>
           </div>
@@ -75,7 +75,9 @@ export default function DevelopmentSupport() {
                 <h3 className="text-xl font-semibold mt-4 text-center">
                   {service.title}
                 </h3>
-                <p className="text-center mt-2">{service.description}</p>
+                <p className="text-sm md:text-lg text-center mt-2">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
@@ -93,13 +95,15 @@ export default function DevelopmentSupport() {
                 <h4 className="text-lg font-semibold mt-4 text-center">
                   {reason.title}
                 </h4>
-                <p className="text-center mt-2">{reason.description}</p>
+                <p className="text-sm md:text-lg text-center mt-2">
+                  {reason.description}
+                </p>
               </div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg">
+            <p className="text-sm md:text-lg">
               お客様のビジネスを成功に導くWebソリューションを提供いたします。
               <br />
               Webサイト制作・ECサイト構築に関するご相談は、お気軽にお問い合わせください。

@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-export const runtime = "edge";
-
 export default function WorkDetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">

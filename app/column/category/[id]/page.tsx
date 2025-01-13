@@ -5,8 +5,6 @@ import PageTitle from "@/app/_components/elements/PageTitle";
 import { getCategoryDetail, getBlogList } from "@/app/_libs/microcms";
 import { notFound } from "next/navigation";
 
-export const runtime = "edge";
-
 type Props = {
   params: Promise<{
     id: string;

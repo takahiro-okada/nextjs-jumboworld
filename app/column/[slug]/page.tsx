@@ -7,8 +7,6 @@ import Sidebar from "@/app/_features/column/components/Sidebar";
 import { getBlogDetail } from "@/app/_libs/microcms";
 import { notFound } from "next/navigation";
 
-export const runtime = "edge";
-
 type Props = {
   params: Promise<{
     slug: string;
@@ -44,8 +42,6 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
   const data = await getBlogDetail(resolvedParams.slug, {
     draftKey: resolvedSearchParams?.dk,
   }).catch(notFound);
-
-  console.log(data);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -110,7 +106,7 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
               </div>
 
               {/* 著者情報 */}
-              <div className="bg-gray-50 rounded-lg p-6 mb-8">
+              {/* <div className="bg-gray-50 rounded-lg p-6 mb-8">
                 <div className="flex items-center">
                   <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                     <Image
@@ -129,7 +125,7 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* ナビゲーション */}
               <div className="flex justify-between items-center border-t border-gray-200 pt-8">
