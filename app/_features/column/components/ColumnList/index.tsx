@@ -11,7 +11,7 @@ export default function ColumnList({ blogs }: Props) {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+    <div className="grid grid-cols-2 gap-3 md:grid-cols-2 md:gap-8 mb-8">
       {blogs.map((blog) => (
         <BlogCard key={blog.id} blog={blog} />
       ))}

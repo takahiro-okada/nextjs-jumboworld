@@ -45,8 +45,6 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
     draftKey: resolvedSearchParams?.dk,
   }).catch(notFound);
 
-  console.log(data);
-
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -110,7 +108,7 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
               </div>
 
               {/* 著者情報 */}
-              <div className="bg-gray-50 rounded-lg p-6 mb-8">
+              {/* <div className="bg-gray-50 rounded-lg p-6 mb-8">
                 <div className="flex items-center">
                   <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                     <Image
@@ -129,7 +127,7 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* ナビゲーション */}
               <div className="flex justify-between items-center border-t border-gray-200 pt-8">
