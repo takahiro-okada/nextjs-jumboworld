@@ -4,8 +4,6 @@ export default function CompanyPage() {
   const companyInfo = [
     { label: "名前", value: "JUMBO WORLD" },
     { label: "所在地", value: "愛知県半田市板山町3-88-10" },
-    { label: "電話番号", value: "070-8525-1223" },
-    { label: "メールアドレス", value: "info@jumboworld.net" },
     {
       label: "事業内容",
       value: "ホームページ制作、ECサイト制作、SEO対策、LINE公式アカウント",
