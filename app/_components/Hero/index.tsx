@@ -1,8 +1,8 @@
 "use client";
 
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import Globe from "@/app/_components/Globe";
+// import { Canvas } from "@react-three/fiber";
+// import { OrbitControls } from "@react-three/drei";
+// import Globe from "@/app/_components/Globe";
 
 import Button from "@/app/_components/elements/Button";
 
@@ -26,14 +26,14 @@ export default function Hero() {
           </div>
         </div>
         <div className="w-full h-60 md:h-auto md:w-1/2 mt-8 md:mt-0 relative">
-          <div className="absolute w-full aspect-square mx-auto md:top-[-150px] md:right-[-200px]">
+          {/* <div className="absolute w-full aspect-square mx-auto md:top-[-150px] md:right-[-200px]">
             <Canvas>
               <ambientLight intensity={4} />
               <pointLight position={[10, 10, 10]} />
               <Globe />
               <OrbitControls enableZoom={false} enablePan={false} />
             </Canvas>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
